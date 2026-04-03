@@ -14,6 +14,7 @@ import {
 
 import { praxis } from "@/lib/dummy-data"
 import { cn } from "@/lib/utils"
+import { LegalFooter } from "@/components/legal-footer"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 
@@ -38,8 +39,8 @@ export default function PraxisLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname()
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mx-auto flex min-h-screen w-full max-w-[1400px]">
+    <div className="flex min-h-screen flex-col bg-background">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-1">
         <aside className="hidden w-[260px] shrink-0 border-r border-border bg-white p-4 md:block">
           <div className="flex flex-col gap-6">
             <div>
@@ -97,8 +98,9 @@ export default function PraxisLayout({ children }: { children: React.ReactNode }
           </div>
         </aside>
 
-        <main className="flex-1 p-4 md:p-8">{children}</main>
+        <main className="min-w-0 flex-1 p-4 md:p-8">{children}</main>
       </div>
+      <LegalFooter />
     </div>
   )
 }
