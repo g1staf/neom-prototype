@@ -16,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${GeistSans.className} h-full antialiased`}>
-      <body className="flex min-h-dvh flex-col bg-background text-foreground">
-        <div className="flex min-h-0 flex-1 flex-col">{children}</div>
+      <body className="min-h-dvh min-h-screen bg-background text-foreground">
+        {/* pb: Platz für fixierte Fußzeile (Sonner-Toasts sitzen üblicherweise oben/unten rechts) */}
+        <div className="flex min-h-dvh min-h-screen flex-col pb-[4.25rem]">{children}</div>
         <LegalFooter />
         <Toaster richColors />
       </body>
