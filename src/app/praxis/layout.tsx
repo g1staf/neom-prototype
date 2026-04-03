@@ -14,7 +14,6 @@ import {
 
 import { praxis } from "@/lib/dummy-data"
 import { cn } from "@/lib/utils"
-import { LegalFooter } from "@/components/legal-footer"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 
@@ -39,7 +38,7 @@ export default function PraxisLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname()
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-full flex-1 flex-col bg-background">
       <div className="mx-auto flex w-full max-w-[1400px] flex-1">
         <aside className="hidden w-[260px] shrink-0 border-r border-border bg-white p-4 md:block">
           <div className="flex flex-col gap-6">
@@ -47,13 +46,13 @@ export default function PraxisLayout({ children }: { children: React.ReactNode }
               <Link href="/praxis/dashboard" className="inline-flex items-center gap-2">
                 <Image
                   src="/brand/neoma-logo.png"
-                  alt="Neoma"
+                  alt="neom"
                   width={112}
                   height={28}
                   priority
                   className="h-7 w-auto"
                 />
-                <span className="sr-only">Neoma</span>
+                <span className="sr-only">neom</span>
               </Link>
               <div className="mt-2 text-sm text-muted-foreground">
                 <div className="truncate">{praxis.name}</div>
@@ -100,7 +99,6 @@ export default function PraxisLayout({ children }: { children: React.ReactNode }
 
         <main className="min-w-0 flex-1 p-4 md:p-8">{children}</main>
       </div>
-      <LegalFooter />
     </div>
   )
 }

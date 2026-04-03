@@ -184,7 +184,7 @@ export default function PatientDashboardPage() {
       <footer className="text-xs text-muted-foreground">
         Fragen? Kontaktieren Sie Ihre Praxis: 06221 / 123 456
         <span className="mx-2 text-border">·</span>
-        Powered by Neoma
+        Powered by neom
       </footer>
     </div>
   )

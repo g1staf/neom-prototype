@@ -22,7 +22,7 @@ export default function PraxisEnrollmentPage() {
   )
   const [color, setColor] = React.useState("#1447e6")
 
-  const link = "https://app.neoma.de/p/dr-hartmann"
+  const link = "https://app.neom.de/p/dr-hartmann"
 
   return (
     <PageTransition>

@@ -242,7 +242,7 @@ export default function PatientEnrollmentPage() {
       </div>
 
       <div className="text-xs text-muted-foreground">
-        Fragen? Kontaktieren Sie Ihre Praxis. Powered by Neoma (Prototype).
+        Fragen? Kontaktieren Sie Ihre Praxis. Powered by neom (Prototype).
       </div>
     </div>
   )
